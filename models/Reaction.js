@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-// Schema to create Reaction model
+// Schema to create Reaction embedded document
 const reactionSchema = new mongoose.Schema(
   {
     reactionId: {
