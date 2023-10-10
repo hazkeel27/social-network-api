@@ -1,7 +1,7 @@
-const { Schema, model } = require('mongoose');
+const { Schema, Types, model } = require('mongoose');
 
 // Schema to create Reaction embedded document
-const reactionSchema = new mongoose.Schema(
+const reactionSchema = new Schema(
   {
     reactionId: {
       type: Schema.Types.ObjectId,
