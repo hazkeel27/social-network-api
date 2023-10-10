@@ -7,9 +7,9 @@ module.exports = {
         try {
             const users = await User.find().select('-__v');
             
-            res.json(users);
+            res.status(200).json(users);
         }
-        catch {
+        catch (err) {
             return res.status(500).json(err);
         }
     },
@@ -22,9 +22,9 @@ module.exports = {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
 
-            res.json(user);
+            res.status(200).json(user);
         }
-        catch {
+        catch (err) {
             return res.status(500).json(err);
         }
     },
@@ -33,9 +33,9 @@ module.exports = {
         try {
             const user = await User.create(req.body).select('-__v');
 
-            res.json(user);
+            res.status(200).json(user);
         }
-        catch {
+        catch (err) {
             return res.status(500).json(err);
         }
     },
@@ -52,9 +52,9 @@ module.exports = {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
 
-            res.json(user);
+            res.status(200).json(user);
         }
-        catch {
+        catch (err) {
             return res.status(500).json(err);
         }
     },
@@ -69,12 +69,12 @@ module.exports = {
 
             // ADD Remove a user's associated thoughts when deleted.
 
-            res.json({
+            res.status(200).json({
                 user,
-                message: 'Student successfully deleted'
+                message: 'User successfully deleted'
             });
         }
-        catch {
+        catch (err) {
             return res.status(500).json(err);
         }
     },
@@ -91,9 +91,9 @@ module.exports = {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
 
-            res.json({user});
+            res.status(200).json({user});
         }
-        catch { 
+        catch (err) { 
             return res.status(500).json(err);
         }
     },
@@ -110,9 +110,9 @@ module.exports = {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
 
-            res.json({user});
+            res.status(200).json({user});
         }
-        catch { 
+        catch (err) { 
             return res.status(500).json(err);
         }
     },
