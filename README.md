@@ -16,7 +16,6 @@ An API created with Express.js, MongoDB, and the Mongoose npm module. Users, Tho
 - [License](#license) 📜
 - [Credits](#credits) 🙏
 - [Questions](#questions) ❓
-- [Deployed Application](#link) 🚀
 
 ## <a name="features"></a>Key Features 🔑
 
@@ -148,7 +147,3 @@ Following are the documents I used to help me write code:
 If you have further questions, you are welcome to reach me through my email at hazkeel27@gmail.com.
 
 You can view my projects by going through my GitHub profile at [https://github.com/hazkeel27](https://github.com/hazkeel27).
-
-## <a name="link"></a>Deployed Application 🚀
-
-[]()
