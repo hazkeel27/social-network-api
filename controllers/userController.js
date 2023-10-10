@@ -67,11 +67,12 @@ module.exports = {
                 return res.status(404).json({ message: 'No user with that ID' })
             }
 
-            // ADD Remove a user's associated thoughts when deleted.
+            // delete a user's associated thoughts
+            await Thought.deleteMany({ username: user.username });
 
             res.status(200).json({
                 user,
-                message: 'User successfully deleted'
+                message: 'User and associated thoughts successfully deleted'
             });
         }
         catch (err) {
