@@ -83,7 +83,7 @@ module.exports = {
             res.status(200).json({
                 thought,
                 message: 'Thought successfully deleted'
-            });f
+            });
         }
         catch (err) {
             return res.status(500).json(err);
